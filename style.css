@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&display=swap');
+
+*{
+    font-family: 'Montserrat', sans-serif;
+}
+
+body{
+    background: #183D3D;
+}
+
+#header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+  
+h1 {
+    text-align: center;
+    margin-top: 50px;
+    color: #5C8374;
+}
+
+#search-bar{
+    width: 20%;
+    height: 40px;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    margin: 30px auto;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+#new-task{
+    width: 30%;
+    height: 20px;
+    outline: none;
+    padding: 10px 15px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.add-task-btn{
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 15px 50px;
+    height: 40px;
+    margin-top:10px;
+    margin-left: -134px;
+    font-size: 16px;
+    line-height: 0.7;
+    background: #93B1A6;
+}
+
+#todo-list{
+    width: 50%;
+    margin: 35px auto;
+    padding: 0;
+    list-style: none;
+    border-radius: 10px;
+}
+
+ul li{
+    position: relative;
+    list-style: none;
+    cursor: pointer;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    color: #ECE3CE;
+}
+
+ul li::before{
+    position: absolute;
+    content: '';
+    height: 25px;
+    width: 25px;
+    border-radius: 25px;
+    background: url(images/uncheck.png);
+    background-position: center;
+    background-size: cover;
+    top: 12px; left: 8px;
+    color: #ECE3CE;
+}
+
+ul li.checked{
+    text-decoration: line-through;
+    color: #ECE3CE;
+}
+
+ul li.checked::before{
+    background: url(images/check.png);
+    background-position: center;
+    background-size: cover;
+}
+
+ul li span{
+    position: absolute;
+    top:5px; right: 0px;
+    height: 40px;
+    width: 40px;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 768px){
+    #search-bar{
+        width: 50%;
+    }
+    #todo-list{
+        width: 80%;
+    }
+    #new-task{
+        width: 70%;
+    }
+    .add-task-btn{
+        margin-left: -133px;
+    }
+}
